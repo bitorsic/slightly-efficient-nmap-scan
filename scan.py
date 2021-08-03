@@ -13,6 +13,8 @@ if len(sys.argv) == 2:
 		ports.append(port.strip())
 
 	portsString = ','.join(ports)
+	
+	print("Ports open: {}\n".format(portsString))
 
 	os.system('nmap -T4 -p {} -A {}'.format(portsString, ip))
 
